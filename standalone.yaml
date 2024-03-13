@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    tier: frontend
+  name: standalone-pod
+spec:
+  containers:
+  - image: nginx
+    name: standalone-pod
+
+
+
+
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   creationTimestamp: null
+#   labels:
+#     run: standalone-pod
+#   name: standalone-pod
+# spec:
+#   containers:
+#   - image: nginx
+#     name: standalone-pod
+#     resources: {}
+#   dnsPolicy: ClusterFirst
+#   restartPolicy: Always
+# status: {}
