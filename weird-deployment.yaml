@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weird-deployment
+  labels:
+    weird: alittle
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      weird: very
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 50%
+  template:
+    metadata:
+      labels:
+        weird: very
+    spec:
+      containers:
+      - name: weird-container
+        image: nginx:1.24.0
+
